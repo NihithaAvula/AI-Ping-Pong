@@ -1,10 +1,18 @@
+body{
+    background-position: center;
+    background-size: cover;
+}
+
+
 .heading{
     width: 100%;
     text-align:left;
+    margin-bottom: 5px;
 }
 
 .heading h3{
     display: inline;
+    font-size: 22px;
 }
 
 .heading button{
@@ -20,3 +28,25 @@
     font-size: 22px;
 }
 
+.instructions{
+    text-align: left;
+}
+
+.footer{
+    background-color: hotpink;
+    color: white;
+    line-height: 2.5;
+    margin-bottom: 0px;
+    bottom: 0px;
+    text-align: center;
+    position: sticky;
+}
+
+.modal-body{
+    text-align: left;
+}
+
+canvas{
+    box-shadow: 5px 5px 5px gray;
+    border: 2.5px solid white;
+}
