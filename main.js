@@ -3,6 +3,7 @@ rightWrist_Y = "";
 leftWrist_X = "";
 leftWrist_Y = "";
 rightWrist_score = "";
+gameStatus = "";
 
 var paddle2 =10,paddle1=10;
 
@@ -36,7 +37,7 @@ function setup(){
 
 
 function draw(){
-
+  if(gameStatus == "start"){
  background(0); 
  image(video,0,0,700,600);
  fill("black");
@@ -56,6 +57,7 @@ function draw(){
     strokeWeight(0.5);
    paddle1Y = mouseY; 
    rect(paddle1X,paddle1Y,paddle1,paddle1Height,100);
+
    
    
     //pc computer paddle
@@ -79,6 +81,7 @@ function draw(){
       stroke("#0000ff");
       circle(rightWrist_X,rightWrist_Y,20);
     }
+    }
 }
 
 
@@ -97,7 +100,7 @@ function reset(){
 function midline(){
     for(i=0;i<480;i+=10) {
     var y = 0;
-    fill("white");
+    fill("white"); 
     stroke(0);
     rect(width/2,y+i,10,480);
     }
@@ -194,4 +197,9 @@ function gotPoses(results){
     leftWrist_Y = results[0].pose.leftWrist.y;
 
   }
+}
+
+function startGame(){
+  gameStatus = "Start";
+  document.getElementById("status").innerHTML = "Game is Loaded";
 }
